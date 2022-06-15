@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BucketList" representedClassName=".BucketList" syncable="YES" codeGenerationType="class">
+        <attribute name="text" attributeType="String"/>
+        <relationship name="parentList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="bucketlist" inverseEntity="List"/>
+    </entity>
+    <entity name="CheckList" representedClassName=".CheckList" syncable="YES" codeGenerationType="class">
+        <attribute name="checkmark" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="text" attributeType="String"/>
+        <relationship name="parentList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="List" inverseName="checklist" inverseEntity="List"/>
+    </entity>
+    <entity name="List" representedClassName="List" syncable="YES" codeGenerationType="class">
+        <attribute name="text" attributeType="String"/>
+        <attribute name="type" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="bucketlist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BucketList" inverseName="parentList" inverseEntity="BucketList"/>
+        <relationship name="checklist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CheckList" inverseName="parentList" inverseEntity="CheckList"/>
+    </entity>
+    <elements>
+        <element name="BucketList" positionX="60.7486572265625" positionY="-15.4141845703125" width="128" height="73"/>
+        <element name="CheckList" positionX="61.0025634765625" positionY="60.0543212890625" width="128" height="88"/>
+        <element name="List" positionX="-130.0113525390625" positionY="5.128753662109375" width="128" height="103"/>
+    </elements>
+</model>

@@ -1,2 +1,2 @@
 # Multilist
-An iOS app that stores bucket-lists and checklists using Core Data.
+An iOS app that stores bucket lists and check lists using Core Data.
